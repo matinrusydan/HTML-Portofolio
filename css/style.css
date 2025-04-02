@@ -87,39 +87,70 @@ body {
 }
 
 /* Responsive Navbar */
-@media screen and (max-width: 768px) {
-    .hamburger {
-        display: flex;
+@media screen and (max-width: 440px) {
+    .foot {
+        height: auto; 
+        padding: 50px 16px; 
+        gap: 50px; 
     }
 
-    .btn-nav {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100px;
-        right: 0;
+    .top {
         width: 100%;
-        background-color: black;
-        padding: 20px;
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; 
+        height: auto;
+        gap: 32px; 
+    }
+
+    .col-1, .col-2 {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
     }
 
-    .btn-nav a {
-        display: block;
-        padding: 10px;
+    .useful, .legal, .block, .block-2 {
+        width: 100%;
+        align-items: center;
     }
 
-    .btn-nav.active {
-        display: flex;
+    .legal {
+        height: auto;
+        gap: 24px;
+    }
+
+    .container-legal {
+        width: 100%;
+        height: auto;
+        align-items: center;
+    }
+
+    .list-2 {
+        justify-content: center;
+    }
+
+    .block-2 {
+        margin-left: 0; 
+        align-items: center;
+    }
+
+    .bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+        height: auto;
+        padding: 16px 0;
     }
 }
+
 
 /* Section Home */
 .home {
     width: 100%;
     height: auto;
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
+    flex-direction: column; 
     align-items: center;
     text-align: center;
     gap: 20px;
@@ -193,14 +224,14 @@ body {
     color: #000000;
 }
 
-/* Media Query for Larger Screens */
+
 @media screen and (min-width: 768px) {
     .home {
         flex-direction: row;
-        gap: 600px; /* Tambah jarak antara home-content dan img */
+        gap: 600px; 
         height: 562px;
         text-align: left;
-        justify-content: center; /* Tetap di tengah */
+        justify-content: center; 
     }
 
     .home-content {
@@ -236,9 +267,9 @@ body {
     width: 100%;
     height: 100%;
     display: flex;
-    align-items: flex-start; /* Menjaga elemen tetap di atas */
+    align-items: flex-start; 
     flex-direction: column;
-    padding-top: 20px; /* Atau bisa disesuaikan sesuai kebutuhan */
+    padding-top: 20px; 
     padding-bottom: 100px;
 }
 
@@ -264,7 +295,58 @@ body {
     margin: 5px 0 0;
 }
 
+
+
 .timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin: 20px auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: #333;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* SD dan SMA */
+.sd, .sma {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    position: relative;
+    margin-bottom: 50px;
+    text-align: center;
+    margin-left: 500px;
+}
+
+/* SMP dan Kuliah */
+.smp, .kuliah {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    position: relative;
+    margin-bottom: 50px;
+    text-align: center;
+    margin-right: 500px;
+}
+
+
+
+
+
+/* .timeline {
     position: relative;
     width: 700px;
     margin: 0 auto;
@@ -309,13 +391,13 @@ body {
 .text.left {
     text-align: right;
     margin-right: auto;
-    margin-left: calc(50% - 300px); /* Jarak dari tengah sama dengan yang kanan */
+    margin-left: calc(50% - 300px); 
 }
 
 .text.right {
     text-align: left;
-    margin-left: calc(50% + 35px); /* Sama seperti sebelumnya */
-}
+    margin-left: calc(50% + 35px); 
+} */
 
 /* Responsiveness */
 @media screen and (max-width: 440px) {
@@ -325,7 +407,7 @@ body {
     }
 
     .line {
-        left: 20px; /* Pindahkan garis ke kiri */
+        left: 20px; 
         transform: none;
     }
 
@@ -336,14 +418,14 @@ body {
     }
 
     .circle {
-        left: 20px; /* Sesuaikan lingkaran dengan garis */
+        left: 20px; 
         transform: none;
     }
 
     .text {
         width: auto;
         max-width: 80%;
-        margin-left: 50px; /* Memberi jarak dari garis */
+        margin-left: 50px; 
         text-align: left;
     }
 
@@ -382,9 +464,13 @@ body {
     width: 100%;
     height: 255px;
     display: flex;
-    justify-content: center;
+    justify-content: center; 
     gap: 58px;
     align-items: center;
+    overflow-x: auto;  
+    scroll-behavior: smooth; 
+    padding-bottom: 20px; 
+    white-space: nowrap; 
 }
 
 .project-0 {
@@ -394,6 +480,7 @@ body {
     border-radius: 20px;
     overflow: hidden;
     background: #fff;
+    transition: transform 0.3s ease; 
 }
 
 .project-0 img {
@@ -431,19 +518,22 @@ body {
 /* Responsiveness */
 @media screen and (max-width: 440px) {
     .projects {
-        flex-direction: column; /* Ubah dari horizontal ke vertikal */
-        gap: 20px; /* Kurangi jarak antar proyek */
+        flex-direction: column; 
+        gap: 20px; 
         height: auto;
+        justify-content: center; 
+        align-items: center; 
     }
 
     .project-0 {
-        width: 90%; /* Sesuaikan lebar agar lebih responsif */
+        width: 90%; 
         height: auto;
+        margin: 0 auto; 
     }
 
     .nama-project {
-        width: 100%; /* Pastikan teks menyesuaikan lebar */
-        text-align: center; /* Pusatkan teks untuk tampilan lebih baik */
+        width: 100%; 
+        text-align: center; 
     }
 }
 
@@ -567,6 +657,8 @@ body {
         text-align: center; /* Pusatkan teks testimoni */
     }
 }
+
+
 
 
 body {
@@ -699,8 +791,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: 24px;
-    margin-left: auto; /* Memindahkan elemen ke kanan */
-    align-items: flex-end; /* Menjaga kontennya tetap rata kanan */
+    margin-left: auto; 
+    align-items: flex-end; 
 }
 
 
@@ -723,26 +815,26 @@ body {
 }
 
 .bottom {
-    width: 100%; /* Ubah dari width tetap menjadi 100% */
-    max-width: 1232px; /* Agar tetap tidak terlalu lebar */
+    width: 100%; 
+    max-width: 1232px; 
     height: 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: #ffffff;
     font-size: 14px;
-    padding: 0 16px; /* Beri padding agar tidak mepet ke sisi */
-    margin: 0 auto; /* Pusatkan elemen */
+    padding: 0 16px; 
+    margin: 0 auto; 
 }
 
 
 a {
-    color: #FFF;  /* Mengubah warna teks menjadi putih */
-    text-decoration: none; /* Menghilangkan underline */
+    color: #FFF; 
+    text-decoration: none; 
 }
 
 a:hover {
-    color: #ddd; /* Opsional: warna lebih terang saat hover */
+    color: #ddd; 
 }
 
 .foot a {
@@ -756,18 +848,18 @@ a:hover {
 
 @media screen and (max-width: 440px) {
     .foot {
-        height: auto; /* Biarkan tinggi menyesuaikan konten */
-        padding: 50px 16px; /* Kurangi padding agar tidak terlalu besar */
-        gap: 50px; /* Kurangi jarak antar elemen */
+        height: auto; 
+        padding: 50px 16px; 
+        gap: 50px; 
     }
 
     .top {
         width: 100%;
-        flex-direction: column; /* Ubah dari horizontal ke vertikal */
-        align-items: center; /* Pusatkan elemen */
-        text-align: center; /* Buat teks berada di tengah */
+        flex-direction: column;
+        align-items: center; 
+        text-align: center; 
         height: auto;
-        gap: 32px; /* Beri jarak antar elemen */
+        gap: 32px; 
     }
 
     .col-1, .col-2 {
@@ -798,12 +890,12 @@ a:hover {
     }
 
     .block-2 {
-        margin-left: 0; /* Hapus margin-left agar tetap di tengah */
+        margin-left: 0; 
         align-items: center;
     }
 
     .bottom {
-        flex-direction: column; /* Ubah ke vertikal */
+        flex-direction: column; 
         text-align: center;
         gap: 8px;
         height: auto;
