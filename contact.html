@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - Matin Rusydan</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="contact-page">
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo-matbrew">
+                <p>Matbrew Dev</p>
+                <img src="images/matbrew-logo.png" alt="matbrew-logo">
+            </div>
+            <div class="btn-nav">
+                <a href="index.html" class="btn-home">Home</a>
+                <a href="#about" class="btn-about">About</a>
+                <a href="contact.html" class="btn-contact">Contact</a>
+                <img src="images/github.png" alt="GitHub">
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="contact-container">
+        <h1>Hubungi Saya</h1>
+        <form id="contactForm">
+            <label for="name">Nama Lengkap</label>
+            <input type="text" id="name" name="name" maxlength="50" placeholder="Masukkan nama lengkap">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" maxlength="50" placeholder="Masukkan email">
+
+            <label for="phone">Nomor Handphone</label>
+            <input type="text" id="phone" name="phone" maxlength="15" placeholder="Masukkan nomor HP">
+
+            <label for="message">Pesan</label>
+            <textarea id="message" name="message" maxlength="200" placeholder="Tulis pesan Anda..."></textarea>
+
+            <button type="submit">Kirim</button>
+            <p id="formMessage" class="message-error"></p>
+        </form>
+    </main>
+
+    <footer class="foot">
+        <div class="top">
+            <div class="col-1">
+                <div class="useful">
+                    <a href="#" class="title">Useful Links</a>
+                    <div class="vertical-auto-layout">
+                        <a href="contact.html">Contact</a>
+                        <a href="index.html#portfolio">Portofolio</a>
+                        <a href="#">About</a>
+                    </div>
+                </div>
+                <div class="legal">
+                    <div class="container-legal">
+                        <p class="title">Legal</p>
+                        <div class="legal-autolayout-vertical">
+                            <a href="#">Copyright © 2025 Matin Rusydan</a>
+                            <a href="#">Buy a ready-made company</a>
+                            <a href="#">All services</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="block">
+                    <div class="list">
+                        <a href="#">+62 123 456 789</a>
+                        <a href="#">matin.rusydan@gmail.com</a>
+                    </div>
+                    <div class="list-2">
+                        <img src="images/whatsapp.png" alt="WhatsApp" class="whatsapp">
+                        <img src="images/telegram.png" alt="Telegram" class="telegram">
+                    </div>
+                </div>
+                <div class="block-2">
+                    <button class="btn">Call me back</button>
+                    <div class="address">Tasikmalaya, West Java, Indonesia</div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <p>© 2025 — Copyright</p>
+            <p>Privacy</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="contact.js"></script>
+</body>
+</html>
