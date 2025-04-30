@@ -28,7 +28,7 @@ projectItems.forEach(item => {
     });
 });
 
-<<<<<<< HEAD
+
 // Ambil elemen tombol hamburger dan menu navigasi
 document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.querySelector(".hamburger");
@@ -48,6 +48,5 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-=======
->>>>>>> 91270b1 (Update contact.html dan validasi jQuery)
+
 
